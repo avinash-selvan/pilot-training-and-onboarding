@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class SessionsConfig(AppConfig):
+class TrainersConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'sessions_pilot'
+    name = 'trainers'
