@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'progress',
     'sessions_pilot',
     'pilots',
+    'trainers',
+    'enrollment',
 ]
 
 MIDDLEWARE = [
