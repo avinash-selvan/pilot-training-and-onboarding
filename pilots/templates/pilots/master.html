@@ -1,0 +1,28 @@
+<!-- project/templates/master.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Pilot Management{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Pilot Onboarding System</h1>
+        <nav>
+            <a href="/pilots/">Pilots</a> |
+            <a href="/trainers/">Trainers</a>
+            <!-- Add other navigation links as needed -->
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pilot Onboarding and Training Management</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!-- templates/main.html -->
+{% extends "master.html" %}
+
+{% block title %}Landing Page{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the Pilot Onboarding and Training Management System</h1>
+    <p>Select one of the options below to proceed:</p>
+    
+    <ul>
+        <li><a href="{% url 'pilots:pilot_list' %}">View Pilots</a></li>
+        <li><a href="{% url 'trainers:trainer_list' %}">View Trainers</a></li>
+    </ul>
+{% endblock %}

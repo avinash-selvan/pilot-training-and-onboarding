@@ -1,11 +1,9 @@
 <!-- pilots/templates/pilots/pilot_list.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Pilot List</title>
-</head>
-<body>
+{% extends "master.html" %}
+
+{% block title %}Pilot List{% endblock %}
+
+{% block content %}
     <h1>Pilot List</h1>
     <ul>
         {% for pilot in pilots %}
@@ -16,5 +14,4 @@
             <li>No pilots found.</li>
         {% endfor %}
     </ul>
-</body>
-</html>
+{% endblock %}

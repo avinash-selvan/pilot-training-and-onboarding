@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-app_name='pilots' # Namespacing
+app_name = 'pilots' # Namespacing
 
 urlpatterns = [
     path('', views.pilot_list, name ='pilot_list'),

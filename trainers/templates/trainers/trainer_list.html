@@ -1,0 +1,13 @@
+<!-- trainers/templates/trainers/trainer_list.html -->
+{% extends "master.html" %}
+
+{% block content %}
+<h1>Trainer List</h1>
+<ul>
+    {% for trainer in trainers %}
+        <li>{{ trainer.name }}</li>
+    {% empty %}
+        <h3>No trainers found.</h3>
+    {% endfor %}
+</ul>
+{% endblock %}

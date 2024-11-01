@@ -1,15 +1,12 @@
 <!-- pilots/templates/pilots/pilot_detail.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ pilot.pilot_name }}</title>
-</head>
-<body>
+{% extends "master.html" %}
+
+{% block title %}{{ pilot.pilot_name }}{% endblock %}
+
+{% block content %}
     <h1>Pilot Details: {{ pilot.pilot_name }}</h1>
     <p>Email: {{ pilot.email }}</p>
     <p>Phone: {{ pilot.phone_number }}</p>
     <p>Join Date: {{ pilot.join_date }}</p>
     <a href="{% url 'pilots:pilot_list' %}">Back to Pilot List</a>
-</body>
-</html>
+{% endblock %}
