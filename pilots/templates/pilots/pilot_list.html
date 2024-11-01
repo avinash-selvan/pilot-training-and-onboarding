@@ -1,0 +1,20 @@
+<!-- pilots/templates/pilots/pilot_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pilot List</title>
+</head>
+<body>
+    <h1>Pilot List</h1>
+    <ul>
+        {% for pilot in pilots %}
+            <li>
+                <a href="{% url 'pilots:pilot_detail' pilot.pilot_id %}">{{ pilot.pilot_name }}</a> - {{ pilot.email }}
+            </li>
+        {% empty %}
+            <li>No pilots found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
