@@ -1,0 +1,22 @@
+{% extends "master.html" %}
+
+{% block content %}
+<h1>Training Programs</h1>
+<a href="{% url 'training:add_training_program' %}">
+    <button type="button">➕ Add Training Program</button>
+</a>
+
+<ul>
+    {% for program in programs %}
+        <li>
+            <strong>{{ program.program_name }}</strong><br>
+            Description: {{ program.program_description|default:"No description provided" }}<br>
+            Start Date: {{ program.start_date|date:"Y-m-d" }}<br>
+            End Date: {{ program.end_date|date:"Y-m-d" }}<br>
+            <a href="{% url 'training:edit_training_program' program.program_id %}">Edit</a>
+        </li>
+    {% empty %}
+        <li>No training programs found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

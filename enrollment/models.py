@@ -1,6 +1,6 @@
 from django.db import models
 from pilots.models import Pilot
-from training.models import TrainingProgram
+from training.models import Trainingprogram
 
 # Create your models here.
 

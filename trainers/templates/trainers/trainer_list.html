@@ -4,6 +4,12 @@
 
 {% block content %}
     <h1>Trainer List</h1>
+
+    <!-- Add Trainer Button -->
+    <a href="{% url 'trainers:add_trainer' %}" class="add-trainer-button">
+        <button type="button">➕ Add Trainer</button>
+    </a>
+
     <ul>
         {% for trainer in trainers %}
             <li>

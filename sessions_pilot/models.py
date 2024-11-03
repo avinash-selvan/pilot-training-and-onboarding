@@ -1,15 +1,24 @@
 from django.db import models
 from pilots.models import Pilot
 from trainers.models import Trainer
-from training.models import TrainingProgram
+from training.models import Trainingprogram
 
-class Session(models.Model):
-    pilot = models.ForeignKey(Pilot, on_delete=models.CASCADE)
-    trainer = models.ForeignKey(Trainer, on_delete=models.CASCADE)
-    training_program = models.ForeignKey(TrainingProgram, on_delete=models.CASCADE)
-    session_date = models.DateTimeField()
-    duration_minutes = models.PositiveIntegerField()
-    topic = models.CharField(max_length=100)
+class SessionsPilot(models.Model):
+    session_id = models.AutoField(primary_key=True)
+    session_name = models.CharField(max_length=100)
+    session_date = models.DateField(blank=True, null=True)
+    duration = models.IntegerField(blank=True, null=True)
+    program = models.ForeignKey(Trainingprogram, models.DO_NOTHING, blank=True, null=True)
 
-    def __str__(self):
-        return f"Session on {self.topic} with {self.trainer.name} for {self.pilot.name}"
+    class Meta:
+        managed = False
+        db_table = 'sessions_pilot'
+
+class Trainersession(models.Model):
+    trainer = models.OneToOneField(Trainer, models.DO_NOTHING, primary_key=True)  # The composite primary key (trainer_id, session_id) found, that is not supported. The first column is selected.
+    session = models.ForeignKey(SessionsPilot, models.DO_NOTHING)
+
+    class Meta:
+        managed = False
+        db_table = 'trainersession'
+        unique_together = (('trainer', 'session'),)
