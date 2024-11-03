@@ -1,0 +1,14 @@
+<!-- pilots/templates/pilots/edit_pilot.html -->
+{% extends "master.html" %}
+
+{% block title %}Edit Pilot{% endblock %}
+
+{% block content %}
+    <h2>Edit Pilot: {{ pilot.pilot_name }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+    <a href="{% url 'pilots:pilot_detail' pilot.pilot_id %}">Cancel</a>
+{% endblock %}

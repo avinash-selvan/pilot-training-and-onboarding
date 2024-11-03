@@ -14,6 +14,9 @@
         {% for pilot in pilots %}
             <li>
                 <a href="{% url 'pilots:pilot_detail' pilot.pilot_id %}">{{ pilot.pilot_name }}</a> - {{ pilot.email }}
+                <a href="{% url 'pilots:edit_pilot' pilot.pilot_id %}" title="Edit Pilot">
+                    <button type="button" class="edit-pilot-button">✏️ Edit Pilot</button>
+                </a>
             </li>
         {% empty %}
             <li>No pilots found.</li>
