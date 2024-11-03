@@ -5,6 +5,11 @@
 
 {% block content %}
     <h1>Pilot List</h1>
+
+    <a href="{% url 'pilots:add_pilot' %}" class="add-pilot-button">
+        <button type="button">➕ Add Pilot</button>
+    </a>
+
     <ul>
         {% for pilot in pilots %}
             <li>

@@ -1,0 +1,10 @@
+{% extends "master.html" %}
+
+{% block content %}
+<h2>Add Pilot</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Pilot</button>
+</form>
+{% endblock %}
