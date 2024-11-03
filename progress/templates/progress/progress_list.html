@@ -1,0 +1,15 @@
+<!-- templates/progress/progress_list.html -->
+{% extends "master.html" %}
+
+{% block content %}
+  <h2>Progress List</h2>
+  <ul>
+    {% for entry in progress_entries %}
+      <li>
+        <a href="{% url 'progress:progress_detail' entry.progress_id %}">{{ entry.pilot }} - {{ entry.completion_percentage }}%</a>
+      </li>
+    {% empty %}
+      <li>No progress entries available.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

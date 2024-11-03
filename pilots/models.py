@@ -29,5 +29,8 @@ class Pilot(models.Model):
     class Meta:
         managed = False
         db_table = 'pilot'
+    
+    def __str__(self):
+        return self.pilot_name
 
 

@@ -1,0 +1,26 @@
+{% extends "master.html" %}
+
+{% block content %}
+  <h2>Sessions</h2>
+  <ul>
+    {% for session in sessions %}
+      <li>
+        <a href="{% url 'sessions_pilot:sessions_detail' session.session_id %}">
+          {{ session.session_name }} - Date: {{ session.session_date }}
+        </a>
+        <ul>
+          <li><strong>Duration:</strong> {{ session.duration }} minutes</li>
+          <li><strong>Program:</strong> {{ session.program }}</li>
+          <li><strong>Trainers:</strong>
+            <ul>
+              {% for trainersession in session.trainersession_set.all %}
+                <li>{{ trainersession.trainer }}</li>
+              {% endfor %}
+            </ul>
+          </li>
+        </ul>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+

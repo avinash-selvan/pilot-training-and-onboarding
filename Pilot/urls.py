@@ -24,4 +24,7 @@ urlpatterns = [
     path('pilots/', include('pilots.urls', namespace = 'pilots')),
     path('trainers/', include('trainers.urls', namespace = 'trainers')),
     path('training/', include('training.urls', namespace='training')),
+    path('enrollment/', include('enrollment.urls', namespace='enrollment')),
+    path('sessions/', include('sessions_pilot.urls', namespace='sessions_pilot')),
+    path('progress/', include('progress.urls', namespace='progress')),
 ]

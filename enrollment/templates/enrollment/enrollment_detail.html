@@ -1,0 +1,10 @@
+{% extends "master.html" %}
+
+{% block content %}
+  <h2>Enrollment Details</h2>
+  <p>Enrollment ID: {{ enrollment.enrollment_id }}</p>
+  <p>Pilot: {{ enrollment.pilot }}</p>
+  <p>Program: {{ enrollment.program }}</p>
+  <p>Enrollment Date: {{ enrollment.enrollment_date }}</p>
+  <a href="{% url 'enrollment:enrollment_list' %}">Back to Enrollment List</a>
+{% endblock %}

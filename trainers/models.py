@@ -9,3 +9,6 @@ class Trainer(models.Model):
     class Meta:
         managed = False
         db_table = 'trainer'
+    
+    def __str__(self):
+        return self.trainer_name

@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block content %}
+  <h2>Session: {{ session.session_name }}</h2>
+  <p><strong>Date:</strong> {{ session.session_date }}</p>
+  <p><strong>Duration:</strong> {{ session.duration }} minutes</p>
+  <p><strong>Program:</strong> {{ session.program }}</p>
+  <p><strong>Trainer: </strong>{{ trainer.trainer_name }}</p>
+  
+  <p>
+    {% if trainer %}
+      <strong>Trainer ID:</strong> {{ trainer.trainer_id }}  <!-- Optionally display the trainer ID -->
+    {% endif %}
+  </p>
+
+  <a href="{% url 'sessions_pilot:sessions_list' %}">Back to session list</a>
+{% endblock %}

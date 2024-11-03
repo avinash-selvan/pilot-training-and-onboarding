@@ -1,0 +1,9 @@
+{% extends "master.html" %}
+
+{% block content %}
+  <h2>{{ training.program_name }}</h2>
+  <p>{{ training.program_description }}</p>
+  <p>Start Date: {{ training.start_date }}</p>
+  <p>End Date: {{ training.end_date }}</p>
+  <a href="{% url 'training:training_list' %}">Back to training list</a>
+{% endblock %}

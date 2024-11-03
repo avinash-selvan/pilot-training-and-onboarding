@@ -1,0 +1,12 @@
+{% extends "master.html" %}
+
+{% block content %}
+  <h2>Training List</h2>
+  <ul>
+    {% for training in trainings %}
+      <li>
+        <a href="{% url 'training:training_detail' training.pk %}">{{ training.program_name }}</a> - {{ training.start_date }} to {{ training.end_date }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

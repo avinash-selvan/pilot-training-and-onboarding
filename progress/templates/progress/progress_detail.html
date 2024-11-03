@@ -1,0 +1,13 @@
+<!-- templates/progress/progress_detail.html -->
+{% extends "master.html" %}
+
+{% block content %}
+  <h2>Progress Details</h2>
+  <p><strong>Progress ID:</strong> {{ progress_entry.progress_id }}</p>
+  <p><strong>Pilot:</strong> {{ progress_entry.pilot }}</p>
+  <p><strong>Training Program:</strong> {{ progress_entry.program }}</p>
+  <p><strong>Completion Percentage:</strong> {{ progress_entry.completion_percentage }}%</p>
+  <p><strong>Status:</strong> {{ progress_entry.status }}</p>
+  
+  <a href="{% url 'progress:progress_list' %}">Back to Progress List</a>
+{% endblock %}
