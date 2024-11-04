@@ -23,3 +23,4 @@ class Enrollment(models.Model):
     class Meta:
         managed = False
         db_table = 'enrollment'
+        unique_together = ('pilot', 'program')
