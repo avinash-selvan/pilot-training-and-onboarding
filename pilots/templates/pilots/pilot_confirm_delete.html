@@ -1,0 +1,8 @@
+<!-- templates/pilots/pilot_confirm_delete.html -->
+<h1>Delete Pilot</h1>
+<p>Are you sure you want to delete the pilot "{{ pilot.pilot_name }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm Deletion</button>
+    <a href="{% url 'pilot_list' %}">Cancel</a>
+</form>

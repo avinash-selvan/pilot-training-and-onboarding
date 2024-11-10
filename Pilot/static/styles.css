@@ -33,3 +33,60 @@
 .edit-pilot-button button:hover {
     background-color: #45a053;
 }
+
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #004d7f; /* Dark blue background */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: red;
+    margin: 0;
+}
+
+/* Navigation styles */
+nav {
+    margin: 20px 0;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center; /* Center align the links */
+    flex-wrap: wrap; /* Wrap links if needed */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; /* Add padding for links */
+    margin: 0 10px; /* Spacing between links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.nav-links a:hover {
+    background-color: #0066cc; /* Light blue on hover */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222; /* Dark footer */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
