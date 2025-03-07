@@ -44,11 +44,9 @@ def delete_pilot(request, pilot_id):
 
     if request.method == 'POST':
         # Delete all enrollments associated with the pilot
-        print(Enrollment.objects.filter(pilot=pilot_id))
         Enrollment.objects.filter(pilot=pilot_id).delete()
         
         # Delete all progress records associated with the pilot
-        print(Progress.objects.filter(pilot=pilot_id))
         Progress.objects.filter(pilot=pilot_id).delete()
         
         # Finally, delete the pilot
