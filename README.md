@@ -41,7 +41,7 @@ Pilot/
 │── progress/              # Track pilot progress
 │── templates/             # HTML templates
 │── static/                # CSS, JS, images
-│── db.sqlite3 (if using SQLite)
+│── mysql
 │── manage.py              # Django project manager
 │── requirements.txt       # Required dependencies
 │── .gitignore             # Files to ignore in GitHub
